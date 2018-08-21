@@ -5,21 +5,27 @@
 
 public class Backpack
 {
-	private Pencil pencil;
-	private Ruler ruler;
-	private Textbook textbook;
+	private Pencil pencil = new Pencil(); // <-calling constructor
+	private Ruler ruler = new Ruler();
+	private Textbook textbook = new Textbook();
 
 	private void packAndCheck()
 	{
 		// Your mission is to go to school.
 		// 1. First you need to put all your supplies into your backpack - use the putInBackpack(...) methods
-
+		putInBackpack(pencil);
+		pencil.write("something");
+		putInBackpack(ruler);
+		ruler.measure();
+		putInBackpack(textbook);
+		textbook.read();
 		goToSchool();
 	}
 
 	public static void main(String[] args)
 	{
 		new Backpack().packAndCheck();
+		
 	}
 
 	public void putInBackpack(Pencil supply)

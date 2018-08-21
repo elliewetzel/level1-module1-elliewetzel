@@ -10,6 +10,6 @@ public static void main(String[] args) {
 			// 4. become visible again
 			harry.makeInvisible(false);
 			// 5. cast a “stupefy” spell
-			harry.castSpell(spell);
+			harry.castSpell("stupefy");
 }
 }
